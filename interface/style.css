@@ -10,6 +10,8 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   list-style: none;
 }
 
@@ -91,6 +93,9 @@ body .container .wrapper .form-styles {
 body .container .wrapper .form-styles .form-elements {
   padding: 0.5rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .container .wrapper .form-styles .form-elements .input-styles {
@@ -128,16 +133,69 @@ body .container .wrapper .footer-styles {
 body .container .wrapper .error-msg {
   color: red;
   border: 1px solid red;
-  padding: 0.2rem;
-  font-size: 0.8rem;
-  background-color: yellow;
+  padding: 0.1rem;
+  font-size: 0.75rem;
+  background-color: white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 3px;
-  position: absolute !important;
-  top: 25px !important;
-  left: 91% !important;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 4px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .container .wrapper .animate-water-level-input {
+  -webkit-animation: shake 0.3s ease forwards 3;
+          animation: shake 0.3s ease forwards 3;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  background-color: pink;
+}
+
+@-webkit-keyframes shake {
+  0% {
+  }
+  25% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  75% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+  }
+  25% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  75% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
 }
 
 /*===============================================
