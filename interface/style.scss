@@ -28,9 +28,13 @@
 ================================*/
 $base-color1: #00c6fb;
 $base-color2: #005bea;
-$complimentary-color: #fb4b00;
-$hover: #fb0d00;
+$complimentary-color: hsl(18, 100%, 49%);
+$hover: hsl(18, 90%, 40%);
 $bg-color: rgba(255, 255, 255, 0.5);
+$phones: 600px;
+$tablets: 768px;
+$laptops: 992px;
+$lg-desktops: 1200px;
 
 /*=====================================
         BASE STYLES
@@ -41,7 +45,7 @@ $bg-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
-	background-image: linear-gradient(to top, $base-color2 0%, $base-color1 100%);
+	background-image: linear-gradient(to top, $base-color1 0%, $base-color2 100%);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -61,14 +65,15 @@ body {
 			.headline {
 				font-family: "Lobster", cursive;
 				padding: 1.5rem;
-				font-size: 3.5rem;
+				font-size: 1.5rem;
 				position: absolute;
-				top: 10%;
+				top: 5%;
+				margin-bottom: 2rem;
 			}
 
 			.form-styles {
 				@include flex-pos(column, space-between);
-                font-weight: 600;
+				font-weight: 600;
 				.form-elements {
 					padding: 0.5rem;
 					.input-styles {
@@ -81,12 +86,92 @@ body {
 						font-weight: 800;
 						background-color: $complimentary-color;
 						color: white;
-						
+						padding: 0.3rem 2rem;
 					}
-                    .btn:hover {
-                        background-color: $hover;
-                    }
+					.btn:hover {
+						background-color: $hover;
+					}
 				}
+			}
+			.footer-styles {
+				font-size: 0.8rem;
+				font-weight: 300px;
+				margin-top: 3rem;
+			}
+		}
+	}
+}
+/*===============================================
+			MEDIA QUERY FOR SMALL PHONES
+=================================================*/
+@media (max-width: $phones) {
+	body {
+		.container {
+			.wrapper {
+				width: 90%;
+				.headline {
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+}
+
+/*===============================================
+			MEDIA QUERY FOR LARGE PHONES
+=================================================*/
+@media (min-width: $phones) {
+	body {
+		.container {
+			.wrapper {
+				width: 70%;
+				.headline {
+					font-size: 2.7rem;
+				}
+			}
+		}
+	}
+}
+
+/*===============================================
+			MEDIA QUERY FOR TABLETS
+=================================================*/
+@media (min-width: $tablets) {
+	body {
+		.container {
+			.wrapper {
+				.headline {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+}
+
+/*===============================================
+			MEDIA QUERY FOR LAPTOPS
+=================================================*/
+@media (min-width: $laptops) {
+	body {
+		.container {
+			.wrapper {
+				.headline {
+					font-size: 3.5rem;
+					padding: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+/*===============================================
+			MEDIA QUERY FOR DESKTOPS
+=================================================*/
+@media (min-width: $lg-desktops) {
+	body {
+		.container {
+			.wrapper {
+				max-width: 1000px;
 			}
 		}
 	}

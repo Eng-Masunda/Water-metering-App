@@ -14,8 +14,8 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#005bea), to(#00c6fb));
-  background-image: linear-gradient(to top, #005bea 0%, #00c6fb 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#00c6fb), to(#005bea));
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -65,9 +65,10 @@ body .container .wrapper {
 body .container .wrapper .headline {
   font-family: "Lobster", cursive;
   padding: 1.5rem;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 10%;
+  top: 5%;
+  margin-bottom: 2rem;
 }
 
 body .container .wrapper .form-styles {
@@ -108,11 +109,70 @@ body .container .wrapper .form-styles .form-elements .btn {
   cursor: pointer;
   text-align: center;
   font-weight: 800;
-  background-color: #fb4b00;
+  background-color: #fa4b00;
   color: white;
+  padding: 0.3rem 2rem;
 }
 
 body .container .wrapper .form-styles .form-elements .btn:hover {
-  background-color: #fb0d00;
+  background-color: #c2410a;
+}
+
+body .container .wrapper .footer-styles {
+  font-size: 0.8rem;
+  font-weight: 300px;
+  margin-top: 3rem;
+}
+
+/*===============================================
+			MEDIA QUERY FOR SMALL PHONES
+=================================================*/
+@media (max-width: 600px) {
+  body .container .wrapper {
+    width: 90%;
+  }
+  body .container .wrapper .headline {
+    font-size: 2.5rem;
+  }
+}
+
+/*===============================================
+			MEDIA QUERY FOR LARGE PHONES
+=================================================*/
+@media (min-width: 600px) {
+  body .container .wrapper {
+    width: 70%;
+  }
+  body .container .wrapper .headline {
+    font-size: 2.7rem;
+  }
+}
+
+/*===============================================
+			MEDIA QUERY FOR TABLETS
+=================================================*/
+@media (min-width: 768px) {
+  body .container .wrapper .headline {
+    font-size: 3rem;
+  }
+}
+
+/*===============================================
+			MEDIA QUERY FOR LAPTOPS
+=================================================*/
+@media (min-width: 992px) {
+  body .container .wrapper .headline {
+    font-size: 3.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/*===============================================
+			MEDIA QUERY FOR DESKTOPS
+=================================================*/
+@media (min-width: 1200px) {
+  body .container .wrapper {
+    max-width: 1000px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
