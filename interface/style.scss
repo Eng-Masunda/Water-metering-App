@@ -76,6 +76,7 @@ body {
 				font-weight: 600;
 				.form-elements {
 					padding: 0.5rem;
+					position: relative;
 					.input-styles {
 						@include align-form-elements();
 					}
@@ -97,6 +98,19 @@ body {
 				font-size: 0.8rem;
 				font-weight: 300px;
 				margin-top: 3rem;
+			}
+
+			.error-msg {
+				color: red;
+				border: 1px solid red;
+				padding: 0.2rem;
+				font-size: 0.8rem;
+				background-color: yellow;
+				width: fit-content;
+				border-radius: 3px;
+				position: absolute !important;
+				top: 25px !important;
+				left: 91% !important;
 			}
 		}
 	}

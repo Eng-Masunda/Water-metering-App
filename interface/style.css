@@ -90,6 +90,7 @@ body .container .wrapper .form-styles {
 
 body .container .wrapper .form-styles .form-elements {
   padding: 0.5rem;
+  position: relative;
 }
 
 body .container .wrapper .form-styles .form-elements .input-styles {
@@ -122,6 +123,21 @@ body .container .wrapper .footer-styles {
   font-size: 0.8rem;
   font-weight: 300px;
   margin-top: 3rem;
+}
+
+body .container .wrapper .error-msg {
+  color: red;
+  border: 1px solid red;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  background-color: yellow;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 3px;
+  position: absolute !important;
+  top: 25px !important;
+  left: 91% !important;
 }
 
 /*===============================================

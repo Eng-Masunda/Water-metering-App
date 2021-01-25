@@ -1,38 +1,44 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
 	//add DOM variables
-	const submitBtn = document.getElementById("submit-btn");
 	const waterLevel = document.getElementById("water-level");
 	const address = document.getElementById("address");
+	const submitBtn = document.getElementById("submit-btn");
 
 	//function to verify typed input
-    const verifyInput = function (e) {
-        console.log('firing');
-		let arrayInput = [];
-        let regex = /d+/gi;
-        
-		//collect keyboard values
-        arrayInput.push(e.target.value);
-        console.log(arrayInput);
+	/*
+	1)check for user input
+	2)trim extra space
+	3)check if input uses alphanumeric characters only
+	4) make sure input is less than 100 characters for address and less than 10 characters for water level
+	5) if error is present show error 
+	*/
+	const verifyInput = function (e) {
+		//check for user input
+		if (address.value === "") {
+			address.insertAdjacentHTML(
+				"afterend",
+				'<p class="error-msg"><i class="fas fa-arrow-circle-left"></i>Please enter input here...</p>'
+			);
+		}
 
-		//check if value is a valid number
-        console.log(regex.test(arrayInput));
-		if (regex.test(arrayInput)) {
-			console.log("input is okay");
-        } else {
-            //console.log("regex did not pass");
-        }
-	};
+		if (waterLevel.value === "") {
+			waterLevel.insertAdjacentHTML(
+				"afterend",
+				'<p class="error-msg"><i class="fas fa-arrow-circle-left"></i>Please enter input here...</p>'
+			);
+		}
 
-	//function to verify all input
-	const verifyAllInput = function (e) {
+		if (waterLevel.value !== "" && address.value !== "") {
+			console.log("we have input");
+		}
+
+		//if user input has errors then show error and prevent form from sending
+
+		//if user input is correct then send
 		e.preventDefault();
-		console.log("Verify from submit");
-		console.log(e.target.value);
 	};
 
-	//check input as it is typed in
-	address.addEventListener("keyup", verifyInput);
-	waterLevel.addEventListener("keyup", verifyInput);
-	submitBtn.addEventListener("click", verifyAllInput);
+	//check input when user clicks submit
+	submitBtn.addEventListener("click", verifyInput);
 });
