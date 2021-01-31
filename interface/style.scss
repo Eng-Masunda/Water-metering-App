@@ -107,9 +107,10 @@ body {
 			.error-msg {
 				color: red;
 				border: 1px solid red;
-				padding: 0.1rem;
+				padding: 0.2rem;
 				font-size: 0.75rem;
 				background-color: white;
+				border: transparent;
 				width: fit-content;
 				height: fit-content;
 				border-radius: 4px;
@@ -117,9 +118,9 @@ body {
 			}
 
 			.animate-water-level-input {
-				animation: shake 0.3s ease forwards 3;
+				animation: shake 0.2s ease forwards 3;
 				animation-fill-mode: both;
-				background-color: $error;
+				background-color: $error!important;
 			}
 			@keyframes shake {
 				0% {

@@ -17,25 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	*/
 	const removeErrorMsg1 = () => {
 		if (document.getElementById("error-msg1") !== null) {
-			document.getElementById("error-msg1").remove();
+			//remove red bg-color
 			document
-				.getElementById("error-msg1")
+				.getElementById("address")
 				.classList.remove("animate-water-level-input");
-			document
-				.getElementById("error-msg1")
-				.style.backgroundColor = "white";
-				
+			//remove error tag
+			document.getElementById("error-msg1").remove();
 		}
 	};
 
 	const removeErrorMsg2 = () => {
 		if (document.getElementById("error-msg2") !== null) {
-			document.getElementById("error-msg2").remove();
+			//remove red bg-color
 			document
-				.getElementById("error-msg2")
+				.getElementById("water-level")
 				.classList.remove("animate-water-level-input");
-			document.getElementById("error-msg2").style.backgroundColor =
-				"white";
+			//remove error tag
+			document.getElementById("error-msg2").remove();
 		}
 	};
 

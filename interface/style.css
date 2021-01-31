@@ -133,9 +133,10 @@ body .container .wrapper .footer-styles {
 body .container .wrapper .error-msg {
   color: red;
   border: 1px solid red;
-  padding: 0.1rem;
+  padding: 0.2rem;
   font-size: 0.75rem;
   background-color: white;
+  border: transparent;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -149,11 +150,11 @@ body .container .wrapper .error-msg {
 }
 
 body .container .wrapper .animate-water-level-input {
-  -webkit-animation: shake 0.3s ease forwards 3;
-          animation: shake 0.3s ease forwards 3;
+  -webkit-animation: shake 0.2s ease forwards 3;
+          animation: shake 0.2s ease forwards 3;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  background-color: pink;
+  background-color: pink !important;
 }
 
 @-webkit-keyframes shake {
