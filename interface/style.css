@@ -149,7 +149,7 @@ body .container .wrapper .error-msg {
       align-self: center;
 }
 
-body .container .wrapper .animate-water-level-input {
+body .container .wrapper .animate-input {
   -webkit-animation: shake 0.2s ease forwards 3;
           animation: shake 0.2s ease forwards 3;
   -webkit-animation-fill-mode: both;

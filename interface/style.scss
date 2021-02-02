@@ -117,10 +117,10 @@ body {
 				align-self: center;
 			}
 
-			.animate-water-level-input {
+			.animate-input {
 				animation: shake 0.2s ease forwards 3;
 				animation-fill-mode: both;
-				background-color: $error!important;
+				background-color: $error !important;
 			}
 			@keyframes shake {
 				0% {
